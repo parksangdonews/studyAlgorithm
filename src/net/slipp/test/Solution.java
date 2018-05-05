@@ -40,6 +40,8 @@ public class Solution {
 
         final List<Integer> sortedList = new LinkedList<>();
 
+        //System.out.println(sortedList.get(0));
+
         originalList: for (Integer number : numbers) {      // 전체 영역 반복
             for (int i = 0; i < sortedList.size(); i++) {   // 정렬된 ?
                 if(number < sortedList.get(i)) {
