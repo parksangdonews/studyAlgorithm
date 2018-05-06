@@ -26,6 +26,36 @@ public class Solution {
         // merge sort(병합정렬)
         mergeSort(numbers);
 
+        // binary Search 이진검색
+        binarySearch(numbers, 7);
+
+
+
+
+    }
+
+
+
+    // binary search
+    private static boolean binarySearch(List<Integer> numbers, int i) {
+
+        // 이진 검색
+        if (numbers.isEmpty() || numbers == null) {
+            return false;
+        }
+
+        // 중간 위치 값
+        final Integer comparision = numbers.get(numbers.size() / 2);
+
+        if (i == comparision) {
+            return true;
+        }
+
+        if (i < comparision) {
+            return binarySearch(numbers.subList(0, numbers.size() / 2), i);
+        } else {
+            return binarySearch(numbers.subList(numbers.size() / 2 + 1, numbers.size()), i);
+        }
 
     }
 
